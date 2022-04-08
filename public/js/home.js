@@ -27,6 +27,12 @@ function createClicked(){
                   });
                   pa.innerHTML += "<br /> Allergies:" + favorite.join(", ");
 
+                  var dietarray = [];
+                  $.each($("input[name='diets']:checked"), function(){
+                    dietarray.push($(this).val());
+                  });
+                  pa.innerHTML += "<br /> Diet:" + dietarray.join(", ");
+
                   p.appendChild(pa);
 
                   alert("good");
