@@ -6,6 +6,9 @@ let Data = function(id,name,ingredients,instructions,allergies,diet) {
     this.instructions = instructions;
     this.allergies = allergies;
     this.diet = diet;
+
+    console.log(allergies)
+    console.log(diet)
 }
 
 module.exports = Data;
