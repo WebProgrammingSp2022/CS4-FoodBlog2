@@ -6,7 +6,7 @@ function createClicked(){
                   ingredients:$("#ingredients").val(),
                   instructions:$("#instructions").val(),
                   allergies:$("#allergies").prop("checked"),
-                  diet:$("#diet").prop("checked")
+                  diet: DietCheckbox()
 
                   },
 
@@ -101,6 +101,16 @@ function updateClicked(){
     return false;
 }
 */
+function DietCheckbox(){
+  let dietChecked;
+  var passDiet = [];
+                  $.each($("input[name='diets']:checked"), function(){
+                    passDiet.push($(this).val());
+                  });
+  dietChecked= passDiet.join(", ");
+  console.log(passDiet);
+  return(passDiet);
+}
 
 $(document).ready(function(){
 
