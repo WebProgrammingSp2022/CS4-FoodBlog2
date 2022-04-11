@@ -5,7 +5,7 @@ function createClicked(){
             data: {name:$("#name").val(),
                   ingredients:$("#ingredients").val(),
                   instructions:$("#instructions").val(),
-                  allergies:$("#allergies").prop("checked"),
+                  allergies: AllergyCheckbox(),
                   diet: DietCheckbox()
 
                   },
@@ -111,6 +111,16 @@ function DietCheckbox(){
   console.log(passDiet);
   return(passDiet);
 }
+
+function AllergyCheckbox(){
+  var passAllergy = [];
+                  $.each($("input[name='allergies']:checked"), function(){
+                    passAllergy.push($(this).val());
+                  });
+  console.log(passAllergy);
+  return(passAllergy);
+}
+
 
 $(document).ready(function(){
 
