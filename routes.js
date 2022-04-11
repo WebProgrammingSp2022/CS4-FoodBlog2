@@ -12,6 +12,10 @@ router.get("/",function(req,res){
     res.sendFile(path.resolve(__dirname + "/public/views/index.html"));  //changed
 });
 
+router.get("/testing",function(req,res){
+    res.sendFile(path.resolve(__dirname + "/public/views/main.html"));  //changed
+});
+
 let index = 0
 
 const myDatabase = require('./myDatabase');
