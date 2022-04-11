@@ -18,7 +18,7 @@ function createClicked(){
 
                   let pa = document.createElement("pa");
                   let p = document.getElementById("parag");
-                  pa.innerHTML = "Name:" + $("#name").val() + "<br />"+  "Ingredients:" + $("#ingredients").val();
+                  pa.innerHTML = "<br /> Name:" + $("#name").val() + "<br />"+  "Ingredients:" + $("#ingredients").val();
                   pa.innerHTML += "<br /> Instructions:" + $("#instructions").val();
 
                   var favorite = [];
