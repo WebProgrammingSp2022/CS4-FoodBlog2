@@ -1,3 +1,6 @@
+let identifier;
+            var socket = io();
+
 function createClicked(){
           $.ajax({
             url: "/create",
