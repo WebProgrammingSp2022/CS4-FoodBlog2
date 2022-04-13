@@ -1,5 +1,5 @@
-let identifier;
-            var socket = io();
+//let identifier;
+  //          var socket = io();
 
 function createClicked(){
           $.ajax({
