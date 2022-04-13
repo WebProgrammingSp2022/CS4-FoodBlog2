@@ -9,11 +9,15 @@ let router = express.Router();
 //response is info sending to client from server.
 
 router.get("/",function(req,res){
-    res.sendFile(path.resolve(__dirname + "/public/views/index.html"));  //changed
+    res.sendFile(path.resolve(__dirname + "/public/views/main.html"));  //changed
 });
 
-router.get("/testing",function(req,res){
-    res.sendFile(path.resolve(__dirname + "/public/views/main.html"));  //changed
+router.get("/add",function(req,res){
+    res.sendFile(path.resolve(__dirname + "/public/views/add.html"));  //changed
+});
+
+router.get("/upload",function(req,res){
+    res.sendFile(path.resolve(__dirname + "/public/views/upload.html"));  //changed
 });
 
 let index = 0
