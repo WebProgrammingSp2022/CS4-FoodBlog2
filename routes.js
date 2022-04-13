@@ -12,8 +12,8 @@ router.get("/",function(req,res){
     res.sendFile(path.resolve(__dirname + "/public/views/main.html"));  //changed
 });
 
-router.get("/add",function(req,res){
-    res.sendFile(path.resolve(__dirname + "/public/views/add.html"));  //changed
+router.get("/filter",function(req,res){
+    res.sendFile(path.resolve(__dirname + "/public/views/filter.html"));  //changed
 });
 
 router.get("/upload",function(req,res){
