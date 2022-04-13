@@ -48,6 +48,19 @@ Allison - hello
 Sierra - ehyyyyy
 Nico -
 
+--------------4/13 - Wednesday----------------
+Tasks for the day:
+index.html - Nico
+my database -
+routes -
+home.js -
+
+Completed:
+Talia -
+Allison -
+Sierra - Addeed in buttons to connect to other parts of the website
+Nico -
+
 
 
 
