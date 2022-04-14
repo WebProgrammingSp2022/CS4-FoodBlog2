@@ -9,12 +9,9 @@ font-family: "Playfair Display";
 letter-spacing: 5px;
 }
 .barItem {
+  float: right;
   text-decoration: none;
   color: rgb(183, 145, 108);
-}
-.blankBarItem {
-  text-decoration: none;
-  color: rgb(255, 193, 240);
 }
 .top {
   font-size: 40px;
