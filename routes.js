@@ -78,33 +78,22 @@ router.post('/create', function(req, res){
 
 });
 
-/*
+
 router.get('/read', function(req, res){
 
-    let trimIdentifier = req.query.identifier.trim();
-    if (trimIdentifier == "") {
-        res.json({error:true});
-        return;
-    }
 
-    let identifier = Number(trimIdentifier);
-    if (Number.isNaN(identifier)) {
-        res.json({error:true});
-        return;
-    }
-
-    let val = db.getData(identifier);
+    let val = db.getData(index);
 
     if (val == null)
         res.json({error:true});
     else
     {
-        res.json({error:false,name:val.name});
+        res.json({error:false,name:val.name, val});
     }
 
 
 });
-
+/*
 router.put('/update', function(req, res){
 
     let trimIdentifier = req.body.identifier.trim();
