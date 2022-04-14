@@ -12,10 +12,10 @@ function createClicked(){
 
             success: function(data){
                 if (data.error)
-                  alert("bad");
+                  console.log("bad");
                 else
                 {
-                  alert("good");
+                  console.log("good");
                 }
               } ,
             dataType: "json"
