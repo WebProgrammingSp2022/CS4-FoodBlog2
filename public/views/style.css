@@ -17,6 +17,7 @@ font-family: "Playfair Display";
 letter-spacing: 5px;
 }
 .barItem {
+  padding: 0 20px;
   float: right;
   text-decoration: none;
   color: rgb(183, 145, 108);
@@ -35,14 +36,16 @@ letter-spacing: 5px;
   top: 0;
   margin: 0%;
   margin-right: 0;
-  padding: 0 10px;
 }
 header {
-  max-width:1600px;
-  min-width:500px
+  
 }
 .w3-image{
     height: 350px;
+}
+fieldset
+{
+  border-color: rgb(183, 145, 108);
 }
 
 button {
