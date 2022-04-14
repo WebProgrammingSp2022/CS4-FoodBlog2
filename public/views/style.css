@@ -1,3 +1,11 @@
+/*
+Color pallete rbg
+light blue - 197 240 231
+pink - 255 193 178
+beige - 242 235 216
+green - 154 201 157
+brown - 183 145 108
+*/
 body {
   margin: 0%;
   color: rgb(183, 145, 108);
@@ -39,4 +47,23 @@ header {
 fieldset
 {
   border-color: rgb(183, 145, 108);
+}
+
+button {
+   border: none;
+   padding: 10px 27px;
+   background-color: rgb(183 ,145 ,108);
+   font-family: "Trebuchet MS", Georgia, Serif;
+   color: white;
+   font-size: 16px;
+   position: relative;
+}
+
+.bttn{
+  border: none;
+  padding: 10px 27px;
+  background-color: rgb(183 ,145 ,108);
+  font-family: "Trebuchet MS", Georgia, Serif;
+  color: white;
+  font-size: 16px
 }

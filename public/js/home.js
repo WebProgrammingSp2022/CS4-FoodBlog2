@@ -15,26 +15,6 @@ function createClicked(){
                   alert("bad");
                 else
                 {
-
-                  let pa = document.createElement("pa");
-                  let p = document.getElementById("parag");
-                  pa.innerHTML = "<br /> Name:" + $("#name").val() + "<br />"+  "Ingredients:" + $("#ingredients").val();
-                  pa.innerHTML += "<br /> Instructions:" + $("#instructions").val();
-
-                  var favorite = [];
-                  $.each($("input[name='allergies']:checked"), function(){
-                    favorite.push($(this).val());
-                  });
-                  pa.innerHTML += "<br /> Allergies:" + favorite.join(", ");
-
-                  var dietarray = [];
-                  $.each($("input[name='diets']:checked"), function(){
-                    dietarray.push($(this).val());
-                  });
-                  pa.innerHTML += "<br /> Diet:" + dietarray.join(", ");
-
-                  p.appendChild(pa);
-
                   alert("good");
                 }
               } ,
