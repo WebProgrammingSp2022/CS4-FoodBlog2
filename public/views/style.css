@@ -36,3 +36,7 @@ header {
 .w3-image{
     height: 350px;
 }
+fieldset
+{
+  border-color: rgb(183, 145, 108);
+}
