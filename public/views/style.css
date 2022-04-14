@@ -37,9 +37,6 @@ letter-spacing: 5px;
   margin: 0%;
   margin-right: 0;
 }
-header {
-  
-}
 .w3-image{
     height: 350px;
 }
@@ -47,22 +44,26 @@ fieldset
 {
   border-color: rgb(183, 145, 108);
 }
-
 button {
    border: none;
    padding: 10px 27px;
+   padding-bottom: 5px;
    background-color: rgb(183 ,145 ,108);
    font-family: "Trebuchet MS", Georgia, Serif;
    color: white;
    font-size: 16px;
    position: relative;
 }
-
 .bttn{
   border: none;
   padding: 10px 27px;
+  text-align: center;
   background-color: rgb(183 ,145 ,108);
   font-family: "Trebuchet MS", Georgia, Serif;
   color: white;
   font-size: 16px
+}
+.mainBody{
+  padding-left: 20px;
+  padding-top: 20px;
 }
