@@ -69,14 +69,6 @@ router.post('/create', function(req, res){
     let allergies = req.body.allergies;
     let diet = req.body.diet;
 
-    if (allergies == "" ||allergies == null) {
-        res.json({error:true});
-        return;
-    }
-    if (diet == "" ||diet == null) {
-        res.json({error:true});
-        return;
-    }
 
     let obj = new Data(identifier,name,ingredients,instructions,allergies,diet);
     let val = db.postData(obj);
