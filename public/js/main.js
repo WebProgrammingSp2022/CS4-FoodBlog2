@@ -11,6 +11,7 @@ function readClicked(){
                     let p = document.getElementById("parag");
                   for(let i=0;i<data.val.length;i++)
                   {
+                      p.innerHTML+="<br/>"
                       p.innerHTML += "<br /> Name:" + data.val[i].name + "<br />"+  "Ingredients:" + data.val[i].ingredients;
                       p.innerHTML += "<br /> Instructions:" + data.val[i].instructions;
                       p.innerHTML += "<br /> Allergies:" + data.val[i].allergies;
