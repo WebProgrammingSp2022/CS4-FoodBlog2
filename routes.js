@@ -90,14 +90,20 @@ router.post('/create', function(req, res){
 
 router.get('/read', function(req, res){
 
-
-    let val = db.getData(index);
+    let jdex= 1; //this is another index
+    let val=[];
+    for(let i=0;i<db.data.length+1;i++)
+    {
+        val[i] = db.getData(jdex);
+        jdex++;
+    }
+    jdex=1;
 
     if (val == null)
         res.json({error:true});
     else
     {
-        res.json({error:false,name:val.name, val});
+        res.json({error:false, val});
     }
 
 
