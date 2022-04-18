@@ -12,8 +12,12 @@ body {
   background-color: rgb(242, 235, 216);
   margin: 0%;
 }
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
 font-family: "Playfair Display";
+letter-spacing: 5px;
+}
+h1 {
+font-family: "French Script MT";
 letter-spacing: 5px;
 }
 .barItem {
