@@ -35,9 +35,18 @@ letter-spacing: 5px;
   top: 0;
   margin: 0%;
   margin-right: 0;
+  z-index: 2;
+}
+#w3-image {
+  width: 100%;
+  height: auto;
+}
+.container{
+  position: relative;
 }
 .w3-image{
-    height: 350px;
+  width: 100%;
+  height: auto;
 }
 fieldset
 {
@@ -70,10 +79,10 @@ button {
     background-color: rgba(242,235,216,.9);
     font-size: 5vw;
     font-weight: bold;
-    width: 70%;
     text-align: center;
     position: absolute;
+    z-index: 1;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -150%);
-    mix-blend-mode: screen;
+    transform: translate(-50%, -50%);
   }
