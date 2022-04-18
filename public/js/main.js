@@ -1,3 +1,4 @@
+//lists
 function readClicked(){
           $.ajax({
             url: "/read",
