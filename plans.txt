@@ -57,7 +57,7 @@ home.js -
 
 Completed:
 Talia -
-Allison -
+Allison - Trying to add a folder
 Sierra - Addeed in buttons to connect to other parts of the website
 Nico -
 
