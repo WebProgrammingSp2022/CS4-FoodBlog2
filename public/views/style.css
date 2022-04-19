@@ -11,16 +11,19 @@ body {
   font-family: "Trebuchet MS", Georgia, Serif;
   background-color: rgb(242, 235, 216);
   margin: 0%;
+
 }
 h1, h2, h3, h4, h5, h6 {
 font-family: "Playfair Display";
 letter-spacing: 5px;
+text-shadow: 3px 3px pink;
 }
 .barItem {
   padding: 0 20px;
   float: right;
   text-decoration: none;
   color: rgb(183, 145, 108);
+
 }
 .top {
   font-size: 40px;
@@ -36,10 +39,12 @@ letter-spacing: 5px;
   margin: 0%;
   margin-right: 0;
   z-index: 2;
+
 }
 #w3-image {
   width: 100%;
   height: auto;
+
 }
 .container{
   position: relative;
