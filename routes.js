@@ -110,24 +110,27 @@ router.put('/update', function(req, res){
 
 
 
-        let allergies = req.body.allergies;
+        let allergies1 = req.body.allergies;
         let diet = req.body.diet;
+
 
       let val=[];
       for(let i=0;i<db.data.length+1;i++)
       {
-          val[i] = db.getData(jdex);
-          jdex++;
-      }
-      jdex=1;
+          val[i] = db.getData(i+1);
 
-      val = val.filter(checkFilter);
+      }
+
+
+      val = val.filter(checkFilter());
 
     function checkFilter() {
       for(let i = 0; i < db.data.length+1; i++){
         let data = db.getData(i)
-        for (let i = 0; i < allergies.length; i++)
-        if(data.allergies.includes(allergies[i])){
+
+        console.log(db.getData(i))
+        for (let i = 0; i < allergies1.length; i++)
+        if(data.allergies.includes(allergies1[i])){
           return db.getData(i)
         }
       }

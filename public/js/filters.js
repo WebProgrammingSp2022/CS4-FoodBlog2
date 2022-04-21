@@ -11,10 +11,7 @@ function updateClicked(){
             success: function(data){
 
               alert("working")
-                if (data.error)
-                  alert("bad");
-                else
-                {
+
                     let pa = document.createElement("pa");
                     let p = document.getElementById("parag");
 
@@ -27,7 +24,7 @@ function updateClicked(){
                       p.innerHTML += "<br /> Diets:" + data.val[i].diet;
                   }
                   p.appendChild(pa);
-                }
+
 
               } ,
             dataType: "json"
@@ -58,8 +55,8 @@ function AllergyCheckbox(){
 
 $(document).ready(function(){
 
-  updateClicked();
-  //$("#updateButton").click(updateClicked);
+  //updateClicked();
+  $("#updateButton").click(updateClicked);
 //  $("#readButton").click(readClicked);
 //  $("#updateButton").click(updateClicked);
 //  $("#deleteButton").click(deleteClicked);
