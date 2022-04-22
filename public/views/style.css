@@ -15,8 +15,7 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
 font-family: "Playfair Display";
-letter-spacing: 5px;
-text-shadow: 2px 2px 5px violet;
+letter-spacing: 3px;
 }
 .barItem {
   padding: 0 20px;
@@ -69,6 +68,7 @@ button {
 }
 .bttn{
   border: none;
+  border-radius: 1%;
   padding: 10px 27px;
   text-align: center;
   background-color: rgb(183 ,145 ,108);
@@ -91,8 +91,21 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-#parag {
-  width:400px;
-  height:auto;
+button:hover {
+    background-color: rgb(85,59,34);
+    transition: 0.3s;
+}
+.bttn:hover {
+    background-color: rgb(85,59,34);
+    transition: 0.3s;
+}
+.outer-div
+{
+    padding: 30px;
+}
+.inner-div
+{
+    margin: auto;
+    width: 300px;
+    height: 100px;
 }
