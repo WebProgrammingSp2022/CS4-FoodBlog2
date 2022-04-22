@@ -10,5 +10,5 @@ app.use('/js', express.static('./public/js'));
 app.use('/views', express.static('./public/views'));
 app.use(routes);
 
-var port = process.env.PORT || 3002;
+var port = process.env.PORT || 3000;
 app.listen(port);
