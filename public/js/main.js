@@ -6,16 +6,12 @@ function readClicked(){
             type: "GET",
             data: {},
             success: function(data){
-                if (data.error)
-                  alert("bad");
-                else {
-                    $("#image").src = data.val[0].filename2; 
-                    console.log(data.val[0].filename2)
                     let pa = document.createElement("pa");
                     let p = document.getElementById("parag");
 
                     for(let i=0;i<data.val.length;i++)
                     {
+                          image.src = "/images/"+ data.val[i].filename2;
                           p.innerHTML+="<br/>"
                           p.innerHTML += "<br/>"
                           p.innerHTML += "<br /> Name:" + data.val[i].name + "<br />"+  "Ingredients:" + data.val[i].ingredients;
@@ -24,7 +20,6 @@ function readClicked(){
                           p.innerHTML += "<br /> Diets:" + data.val[i].diet;
                     }
                     p.appendChild(pa);
-                }
               } ,
             dataType: "json"
           });

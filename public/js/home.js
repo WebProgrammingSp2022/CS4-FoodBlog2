@@ -3,6 +3,7 @@ let action = "Create";
 function setAction(actionParam) {
   action = actionParam;
 }
+let filename2;
 function createClicked(){
           $.ajax({
             url: "/create",

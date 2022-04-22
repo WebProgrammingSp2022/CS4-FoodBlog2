@@ -35,7 +35,7 @@ router.post('/fileupload', function(req, res) {
     var form = new formidable.IncomingForm();
     form.parse(req, function (err, fields, files) {
         var oldpath = files.image.path;
-        var newpath = __dirname + '/pictures/' + files.image.name;
+        var newpath = __dirname + '/public/images/' + files.image.name;
         console.log('Received image: ' + files.image.name);
         mv(oldpath, newpath, function (err) {
 //            if (err) throw err;
