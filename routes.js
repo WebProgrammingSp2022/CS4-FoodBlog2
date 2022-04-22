@@ -110,37 +110,55 @@ router.get('/read', function(req, res){
 
 
 });
-/*
+
 router.put('/update', function(req, res){
 
-    let trimIdentifier = req.body.identifier.trim();
-    if (trimIdentifier == "") {
-        res.json({error:true});
-        return;
+
+    //let obj = new Data(identifier,name);
+    //let val = db.putData(obj);
+
+
+
+
+        let allergies1 = req.body.allergies;
+        let diet = req.body.diet;
+
+
+      let val=[];
+      for(let i=0;i<db.data.length+1;i++)
+      {
+          val[i] = db.getData(i+1);
+
+      }
+
+
+      val = val.filter(checkFilter());
+
+    function checkFilter() {
+      for(let i = 0; i < db.data.length+1; i++){
+        let data = db.getData(i)
+
+        console.log(db.getData(i))
+        for (let i = 0; i < allergies1.length; i++)
+        if(data.allergies.includes(allergies1[i])){
+          return db.getData(i)
+        }
+      }
+      res.json({error:false});
     }
 
-    let identifier = Number(trimIdentifier);
-    if (Number.isNaN(identifier)) {
-        res.json({error:true});
-        return;
-    }
 
-    let name = req.body.name.trim();
-    if (name == "") {
-        res.json({error:true});
-        return;
-    }
 
-    let obj = new Data(identifier,name);
-    let val = db.putData(obj);
+
+    /*
     if (val)
         res.json({error:false});
     else
         res.json({error:true});
-
+        */
 
 });
-
+/*
 router.delete('/delete/:identifier', function(req, res){
     let trimIdentifier = req.params.identifier.trim();
     if (trimIdentifier == "") {

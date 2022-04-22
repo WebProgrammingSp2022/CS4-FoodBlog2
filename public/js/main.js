@@ -8,11 +8,10 @@ function readClicked(){
             success: function(data){
                     let pa = document.createElement("pa");
                     let p = document.getElementById("parag");
-
                     for(let i=0;i<data.val.length;i++)
                     {
+
                           image.src = "/images/"+ data.val[i].filename2;
-                          p.innerHTML+="<br/>"
                           p.innerHTML += "<br/>"
                           p.innerHTML += "<br /> Name:" + data.val[i].name + "<br />"+  "Ingredients:" + data.val[i].ingredients;
                           p.innerHTML += "<br /> Instructions:" + data.val[i].instructions;
