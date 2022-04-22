@@ -19,7 +19,7 @@ myDatabase.prototype.postData = function(_data) {
     }
   }
   this.data[dataIndex++] =
-  new Data(_data.id,_data.name,_data.ingredients,_data.instructions,_data.allergies,_data.diet);
+  new Data(_data.id,_data.name,_data.ingredients,_data.instructions,_data.allergies,_data.diet,_data.filename2);
   return true;
 }
 
@@ -27,7 +27,7 @@ myDatabase.prototype.getData = function(id) {
   for (let i=0;i<this.data.length;i++) {
     if (this.data[i] && id == this.data[i].id)
     {
-      return(new Data(this.data[i].id,this.data[i].name,this.data[i].ingredients,this.data[i].instructions,this.data[i].allergies,this.data[i].diet));
+      return(new Data(this.data[i].id,this.data[i].name,this.data[i].ingredients,this.data[i].instructions,this.data[i].allergies,this.data[i].diet,this.data[i].filename2));
     }
   }
   return null;

@@ -1,4 +1,9 @@
 //upload
+let action = "Create";
+function setAction(actionParam) {
+  action = actionParam;
+}
+let filename2;
 function createClicked(){
           $.ajax({
             url: "/create",
@@ -7,17 +12,12 @@ function createClicked(){
                   ingredients:$("#ingredients").val(),
                   instructions:$("#instructions").val(),
                   allergies: AllergyCheckbox(),
-                  diet: DietCheckbox()
-
+                  diet: DietCheckbox(),
+                  filename2: filename2
                   },
 
             success: function(data){
-                if (data.error)
-                  console.log("bad");
-                else
-                {
-                  console.log("good");
-                }
+
               } ,
             dataType: "json"
           });
@@ -106,6 +106,23 @@ function AllergyCheckbox(){
 $(document).ready(function(){
 
   $("#createButton").click(createClicked);
+  $("form").submit(function(event) {
+    let data = new FormData($(this)[0]);
+    $.ajax({
+    url: '/fileupload',
+    type: 'POST',
+    data: data,
+    processData: false, // These two are needed to prevent JQuery from processing the form data
+    contentType: false,
+    mimeType: 'multipart/form-data',
+    dataType: 'json', // Without this, the server's response will be a string instead of a JSON object
+    success: function(data){
+    filename2= data.filename2;
+    }
+
+});
+return false;
+});
 //  $("#readButton").click(readClicked);
 //  $("#updateButton").click(updateClicked);
 //  $("#deleteButton").click(deleteClicked);

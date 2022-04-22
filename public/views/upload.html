@@ -43,12 +43,21 @@
 
                     <label for="lactose">Lactose:</label>
                     <input type="checkbox" id="lactose" name="allergies" value="Lactose" >
-                    </fieldset>
+
+                  <label for="glutenFree">Gluten:</label>
+                  <input type="checkbox" id="glutenFree" name="allergies" value="Gluten Free" >
+
+                  <label for="eggs">Eggs:</label>
+                  <input type="checkbox" id="eggs" name="allergies" value="Eggs" >
+                  </fieldset>
                     <br>
                     <fieldset>
                     <legend>Diets</legend>
                     <label for="vegan">Vegan:</label>
                     <input type="checkbox" id="vegan" name="diets" value="Vegan" >
+
+                    <label for="vegetarian">Vegetarian:</label>
+                    <input type="checkbox" id="vegetarian" name="diets" value="Vegetarian" >
 
                     <label for="keto">Keto:</label>
                     <input type="checkbox" id="keto" name="diets" value="Keto"
@@ -56,6 +65,12 @@
                     <label for="high protein">High Protein:</label>
                     <input type="checkbox" id="high protein" name="diets" value="High Protein" >
                     </fieldset>
+
+                    <img id="display" src="" alt="" height="285" width="380">
+                    <form id="fileupload">
+                    <input id="uploader" type="file" name="image">
+                    <input onclick=setAction("Create") type="submit" value="Create">
+                    </form>
 
 <!-- ingredients textarea
  instructions textarea

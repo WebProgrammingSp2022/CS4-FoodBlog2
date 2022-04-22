@@ -1,6 +1,7 @@
 let path = require("path");
 let express = require("express");
-
+var formidable = require('formidable');
+var mv = require('mv');
 //Look at below web page for info on express.Router()
 //https://scotch.io/tutorials/learn-to-use-the-new-router-in-expressjs-4
 let router = express.Router();
@@ -22,29 +23,37 @@ router.get("/upload",function(req,res){
 
 let index = 0
 
+let filename2;
+
 const myDatabase = require('./myDatabase');
 let db = new myDatabase();
 
 const Data = require('./Data');
+
+router.post('/fileupload', function(req, res) {
+    console.log("router.post fileupload");
+    var form = new formidable.IncomingForm();
+    form.parse(req, function (err, fields, files) {
+        var oldpath = files.image.path;
+        var newpath = __dirname + '/public/images/' + files.image.name;
+        console.log('Received image: ' + files.image.name);
+        mv(oldpath, newpath, function (err) {
+//            if (err) throw err;
+            if (err)
+                res.json({error:true});
+            else
+            {
+                res.json({error:false,filename2:files.image.name});
+            }
+        });
+    });
+});
 
 
 router.post('/create', function(req, res){
 
     index++
 
-    /*
-    let trimIdentifier = req.body.identifier.trim();
-    if (trimIdentifier == "") {
-        res.json({error:true});
-        return;
-    }
-
-    let identifier = Number(trimIdentifier);
-    if (Number.isNaN(identifier)) {
-        res.json({error:true});
-        return;
-    }
-    */
     let identifier = index
 
 
@@ -69,8 +78,9 @@ router.post('/create', function(req, res){
     let allergies = req.body.allergies;
     let diet = req.body.diet;
 
+    filename2 = req.body.filename2;
 
-    let obj = new Data(identifier,name,ingredients,instructions,allergies,diet);
+    let obj = new Data(identifier,name,ingredients,instructions,allergies,diet,filename2);
     let val = db.postData(obj);
     if (val)
         res.json({error:false});
