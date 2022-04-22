@@ -9,6 +9,8 @@ function readClicked(){
                 if (data.error)
                   alert("bad");
                 else {
+                    $("#image").src = data.val[0].filename2; 
+                    console.log(data.val[0].filename2)
                     let pa = document.createElement("pa");
                     let p = document.getElementById("parag");
 
