@@ -17,6 +17,10 @@ function createClicked(){
                   },
 
             success: function(data){
+              if(data.error)
+              {
+                alert("Your recipe did not upload. Please fill out all inputs")
+              }
 
               } ,
             dataType: "json"

@@ -6,26 +6,37 @@ function readClicked(){
             type: "GET",
             data: {},
             success: function(data){
+
                   //  let ar = [];
                     let pa = document.createElement("pa");
                     let p = document.getElementById("parag");
                   //  imgloop();
                     for(let i=0;i<data.val.length;i++)
                     {
-                        //  ar.push("/images/" + data.val[i].filename2)
-                          var img = new Image(200, 200);
-                          img.src = "/images/" + data.val[i].filename2;
+                            console.log(i)
+                            if(data.val[i]==null)
+                            {
+                              console.log("error")
+                            }
+                            else{
 
-                          var src = document.getElementById("images");
-                          src.appendChild(img);
-                          //image.src = "/images/"+ data.val[i].filename2;
-                          p.innerHTML += "<br/>"
-                          p.innerHTML += "<br /> Name:" + data.val[i].name + "<br />"+  "Ingredients:" + data.val[i].ingredients;
-                          p.innerHTML += "<br /> Instructions:" + data.val[i].instructions;
-                          p.innerHTML += "<br /> Allergies:" + data.val[i].allergies;
-                          p.innerHTML += "<br /> Diets:" + data.val[i].diet;
+
+                            var img = new Image(200, 200);
+                            img.src = "/images/" + data.val[i].filename2;
+
+
+                            var src = document.getElementById("images");
+                            src.appendChild(img);
+                            //image.src = "/images/"+ data.val[i].filename2;
+                            p.innerHTML += "<br/>"
+                            p.innerHTML += "<br /> Name:" + data.val[i].name + "<br />"+  "Ingredients:" + data.val[i].ingredients;
+                            p.innerHTML += "<br /> Instructions:" + data.val[i].instructions;
+                            p.innerHTML += "<br /> Allergies:" + data.val[i].allergies;
+                            p.innerHTML += "<br /> Diets:" + data.val[i].diet;
                     }
                     p.appendChild(pa);
+                  }
+
               } ,
             dataType: "json"
           });
