@@ -67,6 +67,36 @@ button {
    font-size: 16px;
    position: relative;
 }
+input[type=submit] {
+   border: none;
+   padding: 10px 27px;
+   padding-bottom: 5px;
+   background-color: rgb(154,201,157);
+   font-family: "Trebuchet MS", Georgia, Serif;
+   color: white;
+   font-size: 16px;
+   position: relative;
+}
+input[type=submit]:hover {
+    background-color: rgb(45,83,47);
+    transition: 0.3s;
+    cursor: pointer;
+}
+input[type=file] {
+   border: none;
+   padding: 10px 27px;
+   padding-bottom: 5px;
+   background-color: rgb(154,201,157);
+   font-family: "Trebuchet MS", Georgia, Serif;
+   color: white;
+   font-size: 16px;
+   position: relative;
+}
+input[type=file]:hover {
+    background-color: rgb(45,83,47);
+    transition: 0.3s;
+    cursor: pointer;
+}
 .bttn{
   border: none;
   border-radius: 1%;
