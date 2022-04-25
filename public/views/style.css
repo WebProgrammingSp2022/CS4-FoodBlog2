@@ -54,7 +54,8 @@ letter-spacing: 3px;
 }
 fieldset
 {
-  border-color: rgb(183, 145, 108);
+  border-color: rgb(85,59,34);
+  border-style: solid;
 }
 button {
    border: none;
@@ -94,10 +95,34 @@ button {
 button:hover {
     background-color: rgb(85,59,34);
     transition: 0.3s;
+    cursor: pointer;
 }
 .bttn:hover {
     background-color: rgb(85,59,34);
     transition: 0.3s;
+    cursor: pointer;
+}
+input[type=checkbox] {
+    cursor: pointer;
+    accent-color: rgb(85,59,34);
+}
+textarea {
+    border-width: 2px;
+    border-color: rgb(85,59,34);
+    color: rgb(183,145,108);
+}
+textarea:focus {
+    outline: none !important;
+    border-color: rgb(85,59,34);
+}
+input[type=text] {
+    border-style: solid;
+    border-color: rgb(85,59,34);
+    color: rgb(183,145,108);
+}
+input[type=text]:focus {
+    outline: none !important;
+    border-color: rgb(85,59,34);
 }
 .outer-div
 {
